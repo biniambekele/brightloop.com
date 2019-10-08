@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Bright Loop - Toronto-based software consultancy that specializes in Python, Java, JavaScript and Go" />
+  <meta name="keywords"
+    content="toronto software engineer, toronto software developer, toronto software development, toronto programmer, toronto python developer, toronto javascript developer, , toronto django developer, toronto reactjs developer, toronto go developer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toronto-based software consultancy that specializes in Python, Java, JavaScript and Go</title>
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body class="layout">
+  <section class="layout__main">
+    <h1><a href="/" class="header" title="Bright Loop"></a></h1>
+
+    <h2>Bright Loop is a Toronto-based software consultancy</h2>
+
+    <p>My name is <a href="https://biniambekele.com" title="Personal website" translate="no">Biniam Bekele</a>. I
+      started
+      Bright Loop in 2004 so that I could help companies to build robust, well designed computer products, systems and
+      infrastructure.
+      Today, my focus and interest remain much the same.</p>
+
+    <p>My day-job is as a "Director, Software Engineering" at <a href="https://www.points.com/">Points</a> in Toronto,
+      Ontario, Canada.</p>
+
+    <p>You can check out some of <a href="https://github.com/andornaut">my side-projects on Github</a>,
+      or see <a href="https://www.linkedin.com/in/biniambekele/">LinkedIn</a> for a bit more about my professional life.
+    </p>
+  </section>
+
+  <section class="layout__contact">
+    <form method="POST" class="contact">
+      <input type="hidden" name="_format" value="plain" />
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_next" value="/email-sent.html" />
+      <input type="hidden" name="_subject" value="Brightloop.com Contact Form" />
+
+      <p>
+        <labeL class="contact__label">E-mail address
+          <input type="email" name="_replyto" class="contact__email" required>
+        </labeL>
+      </p>
+
+      <p>
+        <label class="contact__label contact__label--expand">Message
+          <textarea name="message" class="contact__message" rows="4" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <input type="submit" value="Send" class="contact__send">
+      </p>
+    </form>
+
+    <script>
+      // Try to prevent this email address from being harvested.
+      document.querySelector('.contact').addEventListener('submit', function (event) {
+        const domain = 'brightloop.com';
+        event.target.action = 'https://formspree.io/contactform' + '@' + domain;
+      });
+    </script>
+  </section>
+</body>
+
+</html>

@@ -116,8 +116,7 @@ label {
 
 .contact__send {
   color: var(--green-dark-color);
-  font-size: 1.4rem;
-  padding: 0.5rem 1rem 0.4rem 1rem;
+  padding: 0.5rem 0.7rem 0.4rem 0.6rem;
 }
 
 @media screen and (min-width: 960px) {

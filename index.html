@@ -12,6 +12,15 @@
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      // Try to prevent this email address from being harvested.
+      document.querySelector('.contact').addEventListener('submit', function (event) {
+        const domain = 'brightloop.com';
+        event.target.action = 'https://formspree.io/info' + '@' + domain;
+      });
+    });
+  </script>
 </head>
 
 <body class="layout">
@@ -57,14 +66,6 @@
         <input type="submit" value="Send" class="contact__send">
       </p>
     </form>
-
-    <script>
-      // Try to prevent this email address from being harvested.
-      document.querySelector('.contact').addEventListener('submit', function (event) {
-        const domain = 'brightloop.com';
-        event.target.action = 'https://formspree.io/info' + '@' + domain;
-      });
-    </script>
   </section>
 </body>
 
